@@ -1,18 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './modules/app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './modules/material.module';
+import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { BooksListComponent } from './components/books-list/books-list.component';
+import { BookDetailsComponent } from './components/book-details/book-details.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchBoxComponent,
+    BooksListComponent,
+    BookDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
