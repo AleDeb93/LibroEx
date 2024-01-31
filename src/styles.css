@@ -1,13 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-
-html,
-body {
-  height: 100%;
-}
 @font-face {
   font-family: "Quicksand";
   src: url(assets/Font/Quicksand-VariableFont_wght.ttf);
 }
+html,
+body {
+  height: 100%;
+}
 body {
   margin: 0;
+}
+.title {
+  font-size: x-large;
+  font-weight: 700;
+}
+.sub-title {
+  font-size: large;
+}
+.btn {
+  background-color: #242931;
+  color: #fdfcf7;
 }

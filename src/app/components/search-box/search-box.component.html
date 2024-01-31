@@ -1,1 +1,14 @@
-<p>search-box works!</p>
+<p class="title">LibroEx</p>
+<p class="sub-title">Trova il tuo prossimo capitolo, keep the story going</p>
+<hr>
+<br>
+<br>
+<div class="container">
+  <form>
+    <div class="mb-3">
+      <label class="form-label">Genere</label>
+      <input type="text" class="form-control" name="subject" [(ngModel)]="subject" (keyup.enter)="search()">
+    </div>
+    <button class="btn" (click)="search()">Cerca</button>
+  </form>
+</div>

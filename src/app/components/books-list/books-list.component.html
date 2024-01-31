@@ -1,1 +1,39 @@
-<p>books-list works!</p>
+<div *ngIf="!noSelection">
+    <p class="title">Lista dei libri</p>
+    <p class="sub-title">Genere selezionato: <strong>{{api.subject}}</strong></p>
+</div>
+<div *ngIf="noSelection">
+    <p class="title">Nessun parametro di ricerca</p>
+    <p class="sub-title">Torna alla home per effettuare una nuova ricerca</p>
+</div>
+<hr>
+<br>
+<br>
+<div class="container" *ngIf="!noSelection">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Titolo</th>
+                <th scope="col">Autore</th>
+                <th scope="col">Prima edizione</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <th scope="row">{{book.title}}</th>
+                <td>{{book.authors[0].name}}</td>
+                <td>{{book.first_publish_year}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <button class="btn">&laquo;</button>
+        </li>
+        <li class="page-item">
+            <button class="btn">&raquo;</button>
+        </li>
+        </ul>
+      </nav>
+</div>
