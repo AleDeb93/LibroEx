@@ -14,7 +14,7 @@ export class SearchBoxComponent {
   constructor(private router: Router, private api: ApiService) { }
 
   search() {
-    this.api.subject = this.subject;
+    this.api.subject = this.subject.toLocaleLowerCase();
     this.router.navigate(['books'])
   }
 

@@ -1,1 +1,16 @@
-<p>book-details works!</p>
+<app-loading *ngIf="loading"></app-loading>
+
+<div *ngIf="!loading">
+    <p class="title">{{book.title}}</p>
+    <p class="sub-title">{{book.first_publish_date}}</p>
+    <p class="sub-title" *ngIf="book.first_publish_date == undefined">Data di pubblicazione non disponibile</p>
+    <hr>
+    <br>
+    <br>
+    <p class="description" *ngIf="!descriptionObject">{{book.description}}</p>
+    <p class="description" *ngIf="descriptionObject">{{book.description.value}}</p>
+    <p class="description" *ngIf="book.description == undefined">Nessuna descrizione disponibile per li libro!</p>
+    <p>
+        <img src="https://covers.openlibrary.org/b/id/{{book.covers[0]}}-M.jpg" alt="BookCover" loading="lazy">
+    </p>
+</div>

@@ -11,12 +11,17 @@ export class ApiService {
 
   limit: number = 15;
   offset: number = 0;
-  subject: string = 'love';
+  subject: string = '';
 
   constructor(private http: HttpClient) { }
 
   searchForSubjects(cat: string, l: number, o: number): Observable<any> {
     const subjectUrl: string = `${this.baseUrl}/subjects/${cat}.json?limit=${l}&offset=${o}`;
     return this.http.get(subjectUrl);
+  }
+
+  searchSingleBook(key: string): Observable<any> {
+    const bookUrl = `${this.baseUrl}${key}.json`;
+    return this.http.get(bookUrl);
   }
 }

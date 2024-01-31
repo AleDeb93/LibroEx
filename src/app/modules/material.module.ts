@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
-  imports: [MatSidenavModule, MatIconModule],
-  exports: [MatSidenavModule, MatIconModule]
+  imports: [MatSidenavModule, MatIconModule, ],
+  exports: [MatSidenavModule, MatIconModule, ]
 })
 export class MaterialModule { }

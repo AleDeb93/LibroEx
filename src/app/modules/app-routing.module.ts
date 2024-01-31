@@ -7,10 +7,10 @@ import { BookDetailsComponent } from '../components/book-details/book-details.co
 import { InfoComponent } from '../components/info/info.component';
 
 const routes: Routes = [
-  {path: '', component: SearchBoxComponent},
-  {path: 'books', component: BooksListComponent},
-  {path: 'book/:type/:bookKey', component: BookDetailsComponent},
-  {path: 'info', component: InfoComponent},
+  { path: '', component: SearchBoxComponent },
+  { path: 'books', component: BooksListComponent },
+  { path: 'books/book/:type/:bookKey', component: BookDetailsComponent },
+  { path: 'info', component: InfoComponent },
 ];
 
 @NgModule({

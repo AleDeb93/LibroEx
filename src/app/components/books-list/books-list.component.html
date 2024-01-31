@@ -9,31 +9,39 @@
 <hr>
 <br>
 <br>
+<button *ngIf="noSelection" class="btn" routerLink="">Effettua una nuova ricerca</button>
+
 <div class="container" *ngIf="!noSelection">
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Titolo</th>
-                <th scope="col">Autore</th>
-                <th scope="col">Prima edizione</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let book of books">
-                <th scope="row">{{book.title}}</th>
-                <td>{{book.authors[0].name}}</td>
-                <td>{{book.first_publish_year}}</td>
-            </tr>
-        </tbody>
-    </table>
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <button class="btn">&laquo;</button>
-        </li>
-        <li class="page-item">
-            <button class="btn">&raquo;</button>
-        </li>
-        </ul>
-      </nav>
+    <app-loading *ngIf="loading"></app-loading>
+    <div *ngIf="!noResult">
+        <table class="table" *ngIf="!loading">
+            <thead>
+                <tr>
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Autore</th>
+                    <th scope="col">Prima edizione</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books" routerLink="book/{{book.key}}">
+                    <th scope="row">{{book.title}}</th>
+                    <td>{{book.authors[0].name}}</td>
+                    <td>{{book.first_publish_year}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example" *ngIf="!loading">
+            <ul class="pagination">
+                <li class="page-item" *ngIf="api.offset>0">
+                    <button class="btn" (click)="previous()">&laquo;</button>
+                </li>
+                <li class="page-item">
+                    <button class="btn" (click)="next()">&raquo;</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div *ngIf="!loading">
+        <p *ngIf="noResult" class="sub-title">Nessun risultato da mostrare! <br>Sono presenti errori nelle richieste!</p>
+    </div>
 </div>
