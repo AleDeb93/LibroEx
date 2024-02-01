@@ -22,10 +22,12 @@ Fai clic su un libro per visualizzarne i dettagli.
 Puoi leggere la descrizione completa del libro.
 
 ## Testing
-La copertura dei test è stata valutata al 51%.
+Per visualizzare la copertura di test eseguire in console il comando `ng test --code-coverage`
 
 ## Librerie Esterne
 Angular Material: Componenti UI basati su Material Design.
+
 Bootstrap: Utilizzato per la formattazione e la struttura del layout.
+
 Font Personalizzato: Aggiunto nella cartella src/assets/fonts e configurato in styles.css.
 
