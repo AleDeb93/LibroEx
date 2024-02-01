@@ -11,6 +11,9 @@ Dopo aver installato Node.js, esegui il seguente comando per installare Angular 
 
 A questo punto puoi avviare l'applicazione sul localhost tramite il comando `ng s`. L'app sarà disponibile all'indirizzo http://localhost:4200/.
 
+### Firebase
+L'applicazione è visitabile all'indirizzo https://libroex.netlify.app/
+
 ## Funzionalità Principali
 
 ### Ricerca per Categoria:
