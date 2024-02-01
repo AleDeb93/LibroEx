@@ -26,6 +26,12 @@ Puoi leggere la descrizione completa del libro.
 
 ## Testing
 Per visualizzare la copertura di test eseguire in console il comando `ng test --code-coverage`
+=============================== Coverage summary ===============================
+Statements   : 89.7% ( 61/68 )
+Branches     : 87.5% ( 7/8 )
+Functions    : 76.92% ( 10/13 )
+Lines        : 88.7% ( 55/62 )
+================================================================================
 
 ## Librerie Esterne
 Angular Material: Componenti UI basati su Material Design.
