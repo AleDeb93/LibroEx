@@ -1,27 +1,36 @@
-# LibroEx
+# LibExplorer App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+L'applicazione LibExplorer è un'app basata su Angular che consente agli utenti di cercare libri in base a categorie specifiche tramite le API di Open Library.
 
-## Development server
+## Requisiti per l'ambiente locale
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Per provare l'applicazione in locale scarica il file zip oppure usa il comando `git clone` specificando l'URL del repo.
 
-## Code scaffolding
+Se non presente installa Node.js sul tuo sistema.
+Dopo aver installato Node.js, esegui il seguente comando per installare Angular CLI globalmente; `npm install -g @angular/cli` quindi `cd libroex`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A questo punto puoi avviare l'applicazione sul localhost tramite il comando `ng s`. L'app sarà disponibile all'indirizzo http://localhost:4200/.
 
-## Build
+### Firebase
+L'applicazione è visitabile all'indirizzo https://libroex.netlify.app/
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Funzionalità Principali
 
-## Running unit tests
+### Ricerca per Categoria:
+Inserisci una categoria nella casella di ricerca.
+Fai clic su "Cerca" per visualizzare la lista di libri correlati alla categoria.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Dettagli del Libro:
+Fai clic su un libro per visualizzarne i dettagli.
+Puoi leggere la descrizione completa del libro.
 
-## Running end-to-end tests
+## Testing
+Per visualizzare la copertura di test eseguire in console il comando `ng test --code-coverage`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Librerie Esterne
+Angular Material: Componenti UI basati su Material Design.
 
-## Further help
+Bootstrap: Utilizzato per la formattazione e la struttura del layout.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Font Personalizzato: Aggiunto nella cartella src/assets/fonts e configurato in styles.css.
+
